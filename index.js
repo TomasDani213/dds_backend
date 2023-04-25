@@ -5,8 +5,11 @@ const app = express();
 
 // controlar ruta
 app.get("/", (req, res) => {
-  res.send("Backend inicial dds-backend!");
+  res.send("Backend iniciado!");
 });
+
+const articulosfamiliasmockRouter = require("./routes/articulosfamiliasmock");
+app.use(articulosfamiliasmockRouter);
 
 // levantar servidor
 const port = 3000;
